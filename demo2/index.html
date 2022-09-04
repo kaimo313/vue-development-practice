@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组件及其组件注册</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+        <ul>
+            <todo-item v-for="item in list" :title="item.title" :del="item.del"></todo-item>
+        </ul>
+
+        <todo-list></todo-list>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        // 定义一个名为 todo-item 的组件；名字需要唯一
+        Vue.component("todo-item", {
+            props: {
+                title: String,
+                del: {
+                    type: Boolean,
+                    default: false
+                }
+            },
+            template: `
+                <li>
+                    <span v-if="!del">{{title}}</span>
+                    <span v-else style="text-decoration: line-through;">{{title}}</span>
+                    <button v-show="del">删除</button>
+                </li>
+            `,
+            // data 需要为函数返回一个对象，保证唯一性
+            data: function() {
+                return {}
+            },
+            methods: {
+                
+            },
+        });
+        // 定义一个名为 todo-list 的组件
+        Vue.component("todo-list", {
+            template: `
+                <ul>
+                    <todo-item v-for="item in list" :title="item.title" :del="item.del"></todo-item>
+                </ul>
+            `,
+            data: function() {
+                return {
+                    list: [
+                        {
+                            title: "课程3",
+                            del: true
+                        },{
+                            title: "课程4",
+                            del: false
+                        },
+                    ]
+                }
+            },
+        });
+
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                message: "kaimo 313",
+                list: [
+                    {
+                        title: "课程1",
+                        del: true
+                    },{
+                        title: "课程2",
+                        del: false
+                    },
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
