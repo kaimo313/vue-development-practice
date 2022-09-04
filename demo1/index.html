@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+
+        <!-- v-bind -->
+        <div v-bind:id="id1"></div>
+        <!-- v-bind：简写模式 -->
+        <div :id="id2"></div>
+
+        <!-- v-if、v-show -->
+        <ul>
+            <li>
+                <span v-if="!item.del">{{item.title}}</span>
+                <span v-else style="text-decoration: line-through;">{{item.title}}</span>
+            </li>
+            <li>
+                <button v-show="item.del">删除</button>
+            </li>
+        </ul>
+
+        <!-- v-for -->
+        <ul>
+            <li v-for="item in list">
+                <span v-if="!item.del">{{item.title}}</span>
+                <span v-else style="text-decoration: line-through;">{{item.title}}</span>
+                <button v-show="item.del">删除</button>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                id1: "kaimo111",
+                id2: "kaimo222",
+                message: "kaimo 313",
+                item: {
+                    title: "课程1",
+                    del: false
+                },
+                list: [
+                    {
+                        title: "课程1",
+                        del: true
+                    },{
+                        title: "课程2",
+                        del: false
+                    },
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
