@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue组件的核心概念：插槽</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+
+        <todo-list>
+            <todo-item v-for="item in list" :title="item.title" :del="item.del" @delete="handleDelete">
+                <span slot="pre-icon">前置icon</span>
+                <!-- 新语法 v-slot -->
+                <template v-slot:suf-icon="{value}">后置icon：{{value}}</template>
+            </todo-item>
+        </todo-list>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        // 定义一个名为 todo-item 的组件；名字需要唯一
+        Vue.component("todo-item", {
+            props: {
+                title: String,
+                del: {
+                    type: Boolean,
+                    default: false
+                }
+            },
+            template: `
+                <li>
+                    <slot name="pre-icon"></slot>
+                    <span v-if="!del">{{title}}</span>
+                    <span v-else style="text-decoration: line-through;">{{title}}</span>
+                    <slot name="suf-icon" :value="value">没有使用，默认文字展示</slot>
+                    <button v-show="del" @click="handleClick">删除</button>
+                </li>
+            `,
+            // data 需要为函数返回一个对象，保证唯一性
+            data: function() {
+                return {
+                    value: Math.random()
+                }
+            },
+            methods: {
+                handleClick() {
+                    console.log('点击了删除按钮');
+                    // 发射时间出去
+                    this.$emit("delete", this.title);
+                }
+            },
+        });
+        // 定义一个名为 todo-list 的组件
+        Vue.component("todo-list", {
+            template: `
+                <ul><slot></slot></ul>
+            `,
+        });
+
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                message: "kaimo 313",
+                list: [
+                    {
+                        title: "课程1",
+                        del: true
+                    },{
+                        title: "课程2",
+                        del: false
+                    },
+                ]
+            },
+            methods: {
+                handleDelete(val) {
+                    console.log('handleDelete---->', val);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
