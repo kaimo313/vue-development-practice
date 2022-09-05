@@ -1,6 +1,13 @@
 <template>
     <div id="app">
         {{message}}
+
+        <div>
+            <input type="text" v-model="message">
+            <!-- 等价于下面的写法 -->
+            <input type="text" :value="message" @input="handleChange">
+        </div>
+
         <todo-list>
             <todo-item v-for="item in list" :key="item.title" :title="item.title" :del="item.del" @delete="handleDelete">
                 <span slot="pre-icon">前置icon</span>
@@ -35,6 +42,9 @@ export default {
         };
     },
     methods: {
+        handleChange(e) {
+            this.message = e.target.value;
+        },
         handleDelete(val) {
             console.log("handleDelete---->", val);
         },
