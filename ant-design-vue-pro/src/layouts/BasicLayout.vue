@@ -4,12 +4,13 @@
             <a-layout-sider
                 v-if="navLayout === 'left'"
                 v-model="collapsed"
-                :theme="navTheme"
+                width="256px"
                 collapsible
+                :theme="navTheme"
                 :trigger="null"
             >
                 <div class="logo">Ant Design Vue Pro</div>
-                <SiderMenu />
+                <SiderMenu :theme="navTheme"/>
             </a-layout-sider>
             <a-layout>
                 <a-layout-header style="background: #fff; padding: 0">
