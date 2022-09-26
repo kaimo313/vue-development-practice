@@ -6,7 +6,7 @@
 
 <script>
 import Chart from "@/components/Chart.vue";
-import axios from "axios";
+import request from "@/utils/request.js";
 export default {
     data() {
         return {
@@ -27,7 +27,9 @@ export default {
     },
     methods: {
         getChartData() {
-            axios.get("/api/dashboard/chart", {
+            request({
+                url: "/api/dashboard/chart1",
+                method: "get",
                 params: {
                     id: "kaimo313"
                 }
