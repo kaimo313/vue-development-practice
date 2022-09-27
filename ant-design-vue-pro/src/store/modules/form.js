@@ -4,7 +4,11 @@ import { message } from "ant-design-vue";
 
 const state = {
     step: {
-        payAccount: "kaimo313"
+        payAccount: "kaimo313",
+        receiverAccount: {
+            type: "alipay",
+            number: ""
+        }
     }
 }
 
