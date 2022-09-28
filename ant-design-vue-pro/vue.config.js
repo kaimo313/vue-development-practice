@@ -1,8 +1,25 @@
+const path = require("path");
+
+const AntDesignThemePlugin = require('./webpack-plugins/antd-theme-webpack-plugin');
+
+const options = {
+    antDir: path.join(__dirname, './node_modules/ant-design-vue'),
+    stylesDir: path.join(__dirname, './src'),
+    varFile: path.join(__dirname, './src/assets/styles/theme/variables.less'),
+    themeVariables: ['@primary-color'],
+    generateOnce: false
+}
+
+const themePlugin = new AntDesignThemePlugin(options);
+
 module.exports = {
     lintOnSave: false,
     css: {
         loaderOptions: {
             less: {
+                modifyVars: {
+                    'primary-color': '#1DA57A',
+                },
                 javascriptEnabled: true
             },
         }
@@ -14,6 +31,9 @@ module.exports = {
         svgRule.uses.clear();
         // 添加要替换的 loader
         svgRule.use('vue-svg-loader').loader('vue-svg-loader');
+    },
+    configureWebpack: {
+        plugins: [ themePlugin ]
     },
     devServer: {
         proxy: {

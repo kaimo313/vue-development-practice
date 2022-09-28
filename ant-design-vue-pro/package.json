@@ -32,6 +32,7 @@
     "@vue/cli-service": "~4.4.6",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/test-utils": "^1.0.3",
+    "antd-theme-generator": "^1.2.3",
     "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.5",
     "cross-env": "^7.0.3",
