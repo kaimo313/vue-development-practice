@@ -12,6 +12,11 @@ import zhCN from "./locale/zhCN";
 import enUS from "./locale/enUS";
 import queryString from "query-string";
 
+import VueHighlightJS from 'vue-highlightjs';
+import 'highlight.js/styles/monokai-sublime.css';
+
+Vue.use(VueHighlightJS);
+
 Vue.config.productionTip = false;
 
 Vue.use(Button);
