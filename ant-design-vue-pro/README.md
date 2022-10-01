@@ -1,50 +1,29 @@
-## 【Vue 开发实战】学习笔记。
+# ant-design-vue-pro
 
-1. [【Vue 开发实战】基础篇 # 1：第一个Vue程序](https://blog.csdn.net/kaimo313/article/details/102651481)
-2. [【Vue 开发实战】基础篇 # 2：组件基础及组件注册](https://blog.csdn.net/kaimo313/article/details/126684831)
-3. [【Vue 开发实战】基础篇 # 3：Vue组件的核心概念：事件](https://blog.csdn.net/kaimo313/article/details/126697018)
-4. [【Vue 开发实战】基础篇 # 4：Vue组件的核心概念：插槽](https://blog.csdn.net/kaimo313/article/details/126697029)
-5. [【Vue 开发实战】基础篇 # 5：理解单文件组件](https://blog.csdn.net/kaimo313/article/details/102692731)
-6. [【Vue 开发实战】基础篇 # 6：双向绑定和单向数据流不冲突](https://blog.csdn.net/kaimo313/article/details/126700169)
-7. [【Vue 开发实战】基础篇 # 7：理解虚拟DOM及key属性的作用](https://blog.csdn.net/kaimo313/article/details/126700195)
-8. [【Vue 开发实战】基础篇 # 8：如何触发组件的更新](https://blog.csdn.net/kaimo313/article/details/126700277)
-9. [【Vue 开发实战】基础篇 # 9：合理应用计算属性和侦听器](https://blog.csdn.net/kaimo313/article/details/126700330)
-10. [【Vue 开发实战】基础篇 # 10：生命周期的应用场景和函数式组件](https://blog.csdn.net/kaimo313/article/details/126700457)
-11. [【Vue 开发实战】基础篇 # 11：指令的本质是什么](https://blog.csdn.net/kaimo313/article/details/126700506)
-12. [【Vue 开发实战】基础篇 # 12：常用高级特性provide/inject](https://blog.csdn.net/kaimo313/article/details/126700577)
-13. [【Vue 开发实战】基础篇 # 13：如何优雅地获取跨层级组件实例（拒绝递归）](https://blog.csdn.net/kaimo313/article/details/126700647)
-14. [【Vue 开发实战】基础篇 # 14：template和JSX的对比以及它们的本质](https://blog.csdn.net/kaimo313/article/details/126700716)
-15. [【Vue 开发实战】生态篇 # 15：为什么需要Vuex](https://blog.csdn.net/kaimo313/article/details/126700780)
-16. [【Vue 开发实战】生态篇 # 16：如何在Vue中使用Vuex](https://blog.csdn.net/kaimo313/article/details/126700892)
-17. [【Vue 开发实战】生态篇 # 17：Vuex核心概念及底层原理](https://blog.csdn.net/kaimo313/article/details/126700942)
-18. [【Vue 开发实战】生态篇 # 18：Vuex最佳实践](https://blog.csdn.net/kaimo313/article/details/126700969)
-19. [【Vue 开发实战】生态篇 # 19：Vue Router的使用场景](https://blog.csdn.net/kaimo313/article/details/126701811)
-20. [【Vue 开发实战】生态篇 # 20：选择何种模式的路由及底层原理](https://blog.csdn.net/kaimo313/article/details/126701861)
-21. [【Vue 开发实战】生态篇 # 21：Nuxt解决了哪些问题？](https://blog.csdn.net/kaimo313/article/details/126701976)
-22. [【Vue 开发实战】生态篇 # 22：Nuxt核心原理是什么？](https://blog.csdn.net/kaimo313/article/details/126701990)
-23. [【Vue 开发实战】生态篇 # 23：组件库对比：Element UI、Ant Design Vue、iView](https://blog.csdn.net/kaimo313/article/details/126702028)
-24. [【Vue 开发实战】生态篇 # 24：提升开发效率和体验的常用工具：ESLint、Prettier、vue-devtools](https://blog.csdn.net/kaimo313/article/details/126703605)
-25. [【Vue 开发实战】生态篇 # 25：单元测试的重要性及其使用](https://blog.csdn.net/kaimo313/article/details/126703698)
-26. [【Vue 开发实战】实战篇 # 26：Ant Design Pro介绍](https://blog.csdn.net/kaimo313/article/details/126703720)
-27. [【Vue 开发实战】实战篇 # 27：使用Vue CLI 3快速创建项目](https://blog.csdn.net/kaimo313/article/details/126703760)
-28. [【Vue 开发实战】实战篇 # 28：如何自定义Webpack和Babel配置](https://blog.csdn.net/kaimo313/article/details/126703796)
-29. [【Vue 开发实战】实战篇 # 29：如何设计一个高扩展性的路由](https://blog.csdn.net/kaimo313/article/details/126703840)
-30. [【Vue 开发实战】实战篇 # 30：实现一个可动态改变的页面布局](https://blog.csdn.net/kaimo313/article/details/126703873)
-31. [【Vue 开发实战】实战篇 # 31：如何将菜单和路由结合](https://blog.csdn.net/kaimo313/article/details/126703892)
-32. [【Vue 开发实战】实战篇 # 32：如何使用路由管理用户权限](https://blog.csdn.net/kaimo313/article/details/126703975)
-33. [【Vue 开发实战】实战篇 # 33：更加精细化的权限设计（权限组件、权限指令）](https://blog.csdn.net/kaimo313/article/details/126704035)
-34. [【Vue 开发实战】实战篇 # 34：如何在组件中使用ECharts、Antv等其他第三方库](https://blog.csdn.net/kaimo313/article/details/126704044)
-35. [【Vue 开发实战】实战篇 # 35：如何高效地使用Mock数据进行开发](https://blog.csdn.net/kaimo313/article/details/126704137)
-36. [【Vue 开发实战】实战篇 # 36：如何与服务端进行交互（Axios）](https://blog.csdn.net/kaimo313/article/details/126704204)
-37. [【Vue 开发实战】实战篇 # 37：创建一个普通表单](https://blog.csdn.net/kaimo313/article/details/126704221)
-38. [【Vue 开发实战】实战篇 # 38：表单初始数据、自动校验、动态赋值](https://blog.csdn.net/kaimo313/article/details/126704246)
-39. [【Vue 开发实战】实战篇 # 39：创建一个分步表单](https://blog.csdn.net/kaimo313/article/details/126704289)
-40. [【Vue 开发实战】实战篇 # 40：自己封装一个支持自动校验的表单项](https://blog.csdn.net/kaimo313/article/details/126704310)
-41. [【Vue 开发实战】实战篇 # 41：如何管理系统中使用的图标](https://blog.csdn.net/kaimo313/article/details/126704337)
-42. [【Vue 开发实战】实战篇 # 42：如何定制主题及动态切换主题](https://blog.csdn.net/kaimo313/article/details/126704433)
-43. [【Vue 开发实战】实战篇 # 43：如何做好国际化](https://blog.csdn.net/kaimo313/article/details/126704459)
-44. [【Vue 开发实战】实战篇 # 44：如何高效地构建打包发布](https://blog.csdn.net/kaimo313/article/details/126704545)
-45. [【Vue 开发实战】实战篇 # 45：如何构建可交互的组件文档让代码高亮的显示在页面](https://blog.csdn.net/kaimo313/article/details/126704669)
-46. [【Vue 开发实战】实战篇 # 46：如何做好组件的单元测试](https://blog.csdn.net/kaimo313/article/details/126704751)
-47. [【Vue 开发实战】拓展篇 # 47：如何发布组件到npm以及nrm的介绍](https://blog.csdn.net/kaimo313/article/details/126704860)
-48. [【Vue 开发实战】拓展篇 # 48：结课测试和GitHub相关生态应用持续集成、单测覆盖率、文档发布、issue管理（完结）](https://blog.csdn.net/kaimo313/article/details/126704889)
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your unit tests
+```
+npm run test:unit
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
